@@ -1,0 +1,45 @@
+@import "variables";
+body{
+    margin: 0%;
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: $azulOscuro;
+    height: 100px;
+    align-items:center ;
+    .logo{
+        color: $blanco;
+        font-size: $grande;
+        font-family: $letra;
+    }
+    #menu{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        color: $blanco;
+        font-size: $chica;
+        font-family: $letra;
+    }
+    .ayuda button{
+        border-radius: 50px;
+  padding: 13px 35px;
+  background: var(--Accent, #bfd2f8);
+  color: var(--Primary, #1f2b6c);
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+    }
+    .sesion svg{
+        color: $blanco;
+        width: 40px;
+        height: 40px;
+    }
+}
+}
+
+a:-webkit-any-link {
+    color: inherit !important;
+    text-decoration: none !important;
+}
