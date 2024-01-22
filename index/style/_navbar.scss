@@ -1,4 +1,10 @@
 @import "variables";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0%;
 nav{
@@ -38,8 +44,93 @@ nav{
     }
 }
 }
+.responsive {
+  display:none;
+}
+nav .btn button,
+/**/nav .menu button{
+  margin-left: 20px;
+  font-weight: 700;
+  color: #1b3039;
+  padding: 9px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
 
+nav .btn button:hover,
+/**/nav .menu button:hover{
+  background-color: #e2f1f8;
+  color: #ffbc0e;
+  transform: scale(1.1);
+}
 a:-webkit-any-link {
-    color: inherit !important;
-    text-decoration: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+@media screen and (max-width: 800px){
+  .ayuda, .sesion, .menu a{
+      display: none;
+  }
+  .responsive {
+      display: inherit;
+  }
+}
+/*responsive*/
+nav a{
+  text-decoration: none; 
+}
+
+nav .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 49, 63, .95);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+}
+
+nav .overlay .overlay-content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    
+}
+
+nav .overlay a{
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: #eceff1;
+}
+
+nav .overlay a:hover, 
+nav .overlay a:focus{
+  color: #ffbc0e;
+}
+
+nav .overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+  nav .overlay a{
+      font-size: 20px;
+  }
+  nav .overlay .close{
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
 }
