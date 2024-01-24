@@ -1,54 +1,57 @@
 @import "variables";
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    margin: 0%;
-nav{
+body {
+  margin: 0%;
+  nav {
     display: flex;
     justify-content: space-around;
     background-color: $azulOscuro;
     height: 100px;
-    align-items:center ;
-    .logo{
-        color: $blanco;
-        font-size: $grande;
-        font-family: $letra;
+    align-items: center;
+    .logo {
+      color: $blanco;
+      font-size: $grande;
+      font-family: $letra;
     }
-    #menu{
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
-        color: $blanco;
-        font-size: $chica;
-        font-family: $letra;
+    #menu {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      color: $blanco;
+      font-size: $chica;
+      font-family: $letra;
+      :hover {
+        transform: scale(1.5);
+      }
     }
-    .ayuda button{
-        border-radius: 50px;
-  padding: 13px 35px;
-  background: var(--Accent, #bfd2f8);
-  color: var(--Primary, #1f2b6c);
-  font-family: Work Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+    .ayuda button {
+      border-radius: 50px;
+      padding: 13px 35px;
+      background: var(--Accent, #bfd2f8);
+      color: var(--Primary, #1f2b6c);
+      font-family: Work Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
     }
-    .sesion svg{
-        color: $blanco;
-        width: 40px;
-        height: 40px;
+    .sesion svg {
+      color: $blanco;
+      width: 40px;
+      height: 40px;
     }
-}
+  }
 }
 .responsive {
-  display:none;
+  display: none;
 }
 nav .btn button,
-/**/nav .menu button{
+/**/nav .menu button {
   margin-left: 20px;
   font-weight: 700;
   color: #1b3039;
@@ -60,8 +63,8 @@ nav .btn button,
   transition: all 0.3s ease 0s;
 }
 
-nav .btn button:hover,
-/**/nav .menu button:hover{
+nav .responsive button:hover,
+/**/nav .menu button:hover {
   background-color: #e2f1f8;
   color: #ffbc0e;
   transform: scale(1.1);
@@ -70,17 +73,19 @@ a:-webkit-any-link {
   color: inherit !important;
   text-decoration: none !important;
 }
-@media screen and (max-width: 800px){
-  .ayuda, .sesion, .menu a{
-      display: none;
+@media screen and (max-width: 800px) {
+  .ayuda,
+  .sesion,
+  .menu a {
+    display: none;
   }
   .responsive {
-      display: inherit;
+    display: inherit;
   }
 }
 /*responsive*/
-nav a{
-  text-decoration: none; 
+nav a {
+  text-decoration: none;
 }
 
 nav .overlay {
@@ -90,47 +95,46 @@ nav .overlay {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgba(33, 49, 63, .95);
+  background-color: $azulOscuro;
   overflow: hidden;
   transition: all 0.3s ease 0s;
 }
 
-nav .overlay .overlay-content{
+nav .overlay .overlay-content {
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;    
+  justify-content: center;
+  color: $blanco;
+  a :hover {
+    transform: scale(1.1);
+  }
 }
 
-nav .overlay a{
+nav .overlay .overlay-content a {
   padding: 15px;
   font-size: 36px;
   display: block;
   transition: all 0.3s ease 0s;
   font-weight: 700;
-  color: #eceff1;
+  text-decoration: #eceff1;
 }
 
-nav .overlay a:hover, 
-nav .overlay a:focus{
-  color: #ffbc0e;
-}
-
-nav .overlay .close{
+nav .overlay .close {
   position: absolute;
   top: 20px;
   right: 45px;
   font-size: 65px;
 }
 
-@media screen and (max-height:450px) {
-  nav .overlay a{
-      font-size: 20px;
+@media screen and (max-height: 450px) {
+  nav .overlay a {
+    font-size: 20px;
   }
-  nav .overlay .close{
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
+  nav .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
