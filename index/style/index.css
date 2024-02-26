@@ -146,7 +146,6 @@ nav .overlay .close {
   display: grid;
   width: 100%;
   height: 600px;
-  flex-shrink: 0;
   background: url(../../img/fotoiniciall.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -164,7 +163,6 @@ nav .overlay .close {
   font-family: Work Sans;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   letter-spacing: 2.88px;
   text-transform: uppercase;
