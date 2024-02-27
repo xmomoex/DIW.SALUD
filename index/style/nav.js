@@ -5,6 +5,22 @@ function closeNav() {
   document.getElementById("menu-mobile").style.width = "0%";
 }
 
+let searchBtn = document.querySelector(".searchBtn");
+let closehBtn = document.querySelector(".closeBtn");
+let buscadorbox = document.querySelector(".buscadorbox");
+
+searchBtn.onclick = function () {
+  buscadorbox.classList.add("active");
+  closehBtn.classList.add("active");
+  searchBtn.classList.add("active");
+};
+
+closehBtn.onclick = function () {
+  buscadorbox.classList.remove("active");
+  closehBtn.classList.remove("active");
+  searchBtn.classList.remove("active");
+};
+
 const sr = ScrollReveal({
   distance: "65px",
   duration: 2600,
