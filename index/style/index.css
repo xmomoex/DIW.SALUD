@@ -11,7 +11,7 @@ body nav {
   display: flex;
   justify-content: space-around;
   background-color: #1f2b6c;
-  height: 100px;
+  min-height: 13.1vh;
   align-items: center;
 }
 body nav .logo {
@@ -72,7 +72,7 @@ nav .menu button:hover {
 }
 
 a:-webkit-any-link {
-  color: inherit !important;
+  color: inherit;
   text-decoration: none !important;
 }
 
@@ -156,20 +156,42 @@ section {
   margin-top: 1rem;
   border-radius: 5rem;
   background: var(--Accent, #bfd2f8);
-  color: var(--Primary, #1f2b6c);
+  color: var(--Primary, #1f2b6c) !important;
   padding: 0.9rem 3.5rem;
   cursor: pointer;
   font-size: 1rem;
+  z-index: -1;
+  overflow: hidden;
+  border: 2px solid #bfd2f8;
 }
 
 .boton:hover {
-  background: var(--Primary, #1f2b6c);
+  color: var(--Primary, #bfd2f8) !important;
+}
+
+.boton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #1f2b6c;
+  z-index: -1;
+  transition: 0.5s;
+  display: inline-block;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.boton:hover::before {
+  width: 100%;
 }
 
 .home {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 86.9vh;
   background: url(../../img/fotoiniciall.png) no-repeat;
   background-size: cover;
   background-position: center;
