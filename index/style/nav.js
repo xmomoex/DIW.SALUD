@@ -14,3 +14,7 @@ const sr = ScrollReveal({
 
 sr.reveal(".content", { delay: 200, origin: "top" });
 sr.reveal(".boton", { delay: 200, origin: "left" });
+sr.reveal(".logo", { delay: 200, origin: "left" });
+sr.reveal(".ayuda", { delay: 200, origin: "left" });
+sr.reveal(".menu", { delay: 200, origin: "left" });
+sr.reveal(".sesion", { delay: 200, origin: "left" });
