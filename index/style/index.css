@@ -32,12 +32,37 @@ body nav #menu {
   justify-content: space-around;
   width: 50%;
   color: #fcfefe;
-  font-size: 18px;
+  font-size: 22px;
   font-family: Yeseva One;
+  font-weight: bold;
+  position: relative;
 }
-body nav #menu :hover {
-  transform: scale(1.5);
+
+body nav #menu a {
+  position: relative; /* Establece el contexto para el pseudo-elemento */
 }
+
+body nav #menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Ajusta la posición del subrayado */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fcfefe;
+  transform: scaleX(0); /* Inicialmente, el subrayado no está visible */
+  transition: transform 0.3s ease-in-out; /* Transición del subrayado */
+}
+
+body nav #menu a:hover::before {
+  transform: scaleX(1); /* Muestra el subrayado al pasar el ratón */
+}
+
+body nav #menu a:hover {
+  transform: scale(1.3);
+  transition-duration: 0.3s;
+}
+
 body nav .buscador {
   font-size: 2em;
   color: #fcfefe;
@@ -53,27 +78,26 @@ body nav .sesion svg {
 
 body nav .buscadorbox {
   position: absolute;
-  right: -100%;
+  right: 0;
+  top: -100%;
   width: 100%;
   min-height: 13.1vh;
   display: flex;
   background: #1f2b6c;
   align-items: center;
-  padding: 0 30px;
-  transition: 0.5s ease-in-out;
+  transition: top 0.7s ease;
+  padding: 30px;
 }
 
 body nav .buscadorbox.active {
-  visibility: visible;
-  right: 0;
-  box-sizing: border-box;
+  top: 0;
 }
 
 body nav .buscadorbox input {
   width: 100%;
   border: none;
   outline: none;
-  height: 50px;
+  min-height: 5vh;
   color: #fcfefe;
   font-size: 1.25em;
   background: #1f2b6c;
@@ -170,6 +194,7 @@ nav .overlay .overlay-content {
   justify-content: center;
   color: #fcfefe;
 }
+
 nav .overlay .overlay-content a :hover {
   transform: scale(1.1);
 }

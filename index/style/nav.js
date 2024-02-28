@@ -1,5 +1,5 @@
 function openNav() {
-  document.getElementById("menu-mobile").style.width = "50%";
+  document.getElementById("menu-mobile").style.width = "100%";
 }
 function closeNav() {
   document.getElementById("menu-mobile").style.width = "0%";
@@ -35,3 +35,4 @@ sr.reveal(".logo", { delay: 200, origin: "left" });
 sr.reveal(".ayuda", { delay: 200, origin: "left" });
 sr.reveal(".menu", { delay: 200, origin: "left" });
 sr.reveal(".sesion", { delay: 200, origin: "left" });
+sr.reveal(".buscador", { delay: 200, origin: "left" });
