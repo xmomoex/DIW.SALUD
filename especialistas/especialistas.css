@@ -47,14 +47,16 @@ body {
 }
 .especialistas {
   width: 100%;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #medico {
   display: grid;
   height: 100%;
   padding-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 div article {
   align-items: center;
@@ -126,24 +128,4 @@ article button {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 30.8px */
-}
-@media only screen and (max-width: 840px) {
-  .sup,
-  .inf {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .sup .telfyHor,
-  .inf {
-    flex-wrap: wrap;
-  }
-
-  .opciones,
-  .ayuda :no-button {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
 }
