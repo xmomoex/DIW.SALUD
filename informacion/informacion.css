@@ -302,6 +302,7 @@ article {
   background: var(--Accent, #bfd2f8);
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 article p {
   margin-top: 10%;
@@ -391,23 +392,8 @@ footer .pie span {
 footer .pie .logos {
   margin-top: 5%;
 }
-@media only screen and (max-width: 840px) {
-  .sup,
-  .inf {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
 
-  .sup .telfyHor,
-  .inf {
-    flex-wrap: wrap;
-  }
-
-  .opciones,
-  .ayuda :no-button {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
+video {
+  width: 60vh;
+  height: 40vh;
 }
