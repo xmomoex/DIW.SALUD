@@ -37,6 +37,7 @@
         <div class="texto">
           <span id="texto">Revisa tus Próximas Consultas</span>
         </div>
+        <button class="css-button-arrow--sky">Crea una nueva consulta</button>
         <div class="listaconsult">
           <article>
             <span>22/10/2022 - 16:30</span>
@@ -55,36 +56,6 @@
           </article>
         </div>
       </div>
-      <div class="calendario">
-        <div id="calendar"></div>
-      </div>
     </div>
-    <div class="crearconsulta">
-      <h1>Crear Consulta</h1>
-      <button>crear Consulta</button>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          locale: "es",
-          headerToolbar: {
-            left: "prev,next today",
-            center: "title",
-            right: "dayGridMonth,listYear",
-          },
-          buttonText: {
-            today: "Hoy",
-            month: "Mes",
-            list: "Lista",
-          },
-          dateClick: function (info) {
-            alert(info.dateStr + " no hay ninguna cita programada");
-          },
-        });
-        calendar.render();
-      });
-    </script>
   </body>
 </html>
