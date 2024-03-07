@@ -329,20 +329,21 @@ nav {
 
   .texto {
     display: flex;
-
-    /* align-items: center; */
     justify-content: center;
     color: var(--Primary, #1f2b6c);
     text-align: right;
-
-    /* Display 2 */
     font-family: Yeseva One;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    #texto {
+      font-weight: bold;
+    }
   }
-
+  .boton {
+    margin-top: 5%;
+  }
   .listaconsult {
     margin-top: 10%;
     display: flex;
@@ -359,7 +360,7 @@ nav {
       height: 52px;
       flex-shrink: 0;
       align-items: center;
-      margin-bottom: 10%;
+      margin-bottom: 5%;
 
       span {
         color: var(--white, #fcfefe);
@@ -377,13 +378,16 @@ nav {
       }
 
       button {
+        font-family: Yeseva One;
         border-radius: 50px;
         background: var(--Accent, #bfd2f8);
         display: flex;
         width: 110px;
-        padding: 13px 35px;
-        align-items: flex-start;
-        gap: 10px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+        color: #1f2b6c;
+        font-weight: bold;
       }
     }
   }

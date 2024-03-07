@@ -281,16 +281,20 @@ nav .overlay .close {
 }
 .revisarconsultas .texto {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   color: var(--Primary, #1f2b6c);
   text-align: right;
-  /* Display 2 */
   font-family: Yeseva One;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.revisarconsultas .texto #texto {
+  font-weight: bold;
+}
+.revisarconsultas .boton {
+  margin-top: 5%;
 }
 .revisarconsultas .listaconsult {
   margin-top: 10%;
@@ -308,7 +312,7 @@ nav .overlay .close {
   height: 52px;
   flex-shrink: 0;
   align-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .revisarconsultas .listaconsult article span {
   color: var(--white, #fcfefe);
@@ -323,13 +327,16 @@ nav .overlay .close {
   margin-left: 2%;
 }
 .revisarconsultas .listaconsult article button {
+  font-family: Yeseva One;
   border-radius: 50px;
   background: var(--Accent, #bfd2f8);
   display: flex;
   width: 110px;
-  padding: 13px 35px;
-  align-items: flex-start;
-  gap: 10px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  color: #1f2b6c;
+  font-weight: bold;
 }
 
 .css-button-arrow--sky {
