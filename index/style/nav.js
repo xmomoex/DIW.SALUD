@@ -36,3 +36,4 @@ sr.reveal(".ayuda", { delay: 200, origin: "left" });
 sr.reveal(".menu", { delay: 200, origin: "left" });
 sr.reveal(".sesion", { delay: 200, origin: "left" });
 sr.reveal(".buscador", { delay: 200, origin: "left" });
+sr.reveal(".sub", { delay: 200, origin: "left" });
