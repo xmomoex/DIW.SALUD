@@ -267,7 +267,7 @@ nav {
   height: 250px;
   flex-shrink: 0;
   background: linear-gradient(to left, #ffffff73, #fffefe),
-    url(../img/subcabecera1.png);
+    url(../../img/subcabecera1.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -313,124 +313,120 @@ nav {
   }
 }
 
-.crearconsulta {
-  padding: 10%;
-  padding-bottom: 13%;
-  height: 100vh;
-  width: 100%;
-}
-
-.letrasCC {
+.consultas {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-#subtitulo {
-  color: var(--Primary, #1f2b6c);
-  text-align: center;
+.revisarconsultas {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 
-  /* Display 2 */
-  font-family: Yeseva One;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+  .texto {
+    display: flex;
 
-#texto {
-  color: var(--Black, #212124);
-
-  /* Body */
-  font-family: Work Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-
-  /* 22.4px */
-  align-self: center;
-  margin-bottom: 5%;
-}
-
-.formConsulta {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 50% auto;
-  grid-template-rows: 15% 15% 15% 15% auto 15%;
-  grid-column: 1/2;
-
-  input,
-  select,
-  textarea {
-    background: var(--Primary, #1f2b6c);
-    color: var(--white, #fcfefe);
-
-    /* Body */
-    font-family: Work Sans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-
-    /* 22.4px */
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--white, #fcfefe);
-
-    /* Body */
-    font-family: Work Sans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-
-    /* 22.4px */
-  }
-
-  #mensaje {
-    grid-column: 1 / 3;
-  }
-
-  #boton {
-    justify-self: center;
-    grid-column: 1 / 3;
-    width: 100%;
-    background: var(--Accent, #bfd2f8);
+    /* align-items: center; */
+    justify-content: center;
     color: var(--Primary, #1f2b6c);
-    font-weight: bold;
-    text-align: center;
-    font-family: Work Sans;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
+    text-align: right;
 
-    /* 22.4px */
-    border: 0px;
+    /* Display 2 */
+    font-family: Yeseva One;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .listaconsult {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      align-content: space-around;
+      border-radius: 5px;
+      background: var(--Primary, #1f2b6c);
+      height: 52px;
+      flex-shrink: 0;
+      align-items: center;
+      margin-bottom: 10%;
+
+      span {
+        color: var(--white, #fcfefe);
+        font-family: Work Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+
+        /* 25.2px */
+
+        &:nth-of-type(1) {
+          margin-left: 2%;
+        }
+      }
+
+      button {
+        border-radius: 50px;
+        background: var(--Accent, #bfd2f8);
+        display: flex;
+        width: 110px;
+        padding: 13px 35px;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 840px) {
-  .sup,
-  .inf {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.css-button-arrow--sky {
+  margin-top: 5%;
+  min-width: 300px;
+  height: 45px;
+  color: #fff;
+  font-family: "Work Sans";
+  font-weight: bold;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #1f2b6c;
+
+  &:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+
+    &:after {
+      opacity: 1;
+      right: 10px;
+    }
   }
 
-  .sup .telfyHor,
-  .inf {
-    flex-wrap: wrap;
-  }
-
-  .opciones,
-  .ayuda :no-button {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+  &:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
   }
 }
